@@ -1,12 +1,23 @@
 <template>
-  <div className="container">
+  <div class="app">
     <header>
-      <h1>Todo List</h1>
+      <div className="app-bar">
+        <div className="app-header">
+          <h1>📝️ To Do List</h1>
+        </div>
+      </div>
     </header>
-    <TaskForm />
-    <ul>
-      <Task v-for="task in tasks" v-bind:key="task._id" v-bind:task="task" />
-    </ul>
+    <div class="main">
+      <TaskForm />
+      <ul class="tasks">
+        <Task
+          class="task"
+          v-for="task in tasks"
+          v-bind:key="task._id"
+          v-bind:task="task"
+        />
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -15,7 +26,6 @@ import Vue from "vue";
 import Task from "./components/Task.vue";
 import TaskForm from "./components/TaskForm.vue";
 import { TasksCollection } from "../api/TasksCollection";
-
 export default {
   components: {
     Task,
@@ -32,3 +42,5 @@ export default {
   },
 };
 </script>
+
+<style></style>

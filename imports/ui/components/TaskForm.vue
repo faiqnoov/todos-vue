@@ -1,5 +1,5 @@
 <template>
-  <form className="new-task" @submit.prevent="handleSubmit">
+  <form class="task-form" @submit.prevent="handleSubmit">
     <input type="text" placeholder="Type to add new tasks" v-model="newTask" />
     <button type="submit">Add Task</button>
   </form>
